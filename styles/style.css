@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    box-sizing: 0;
+    margin: 0;
+}
+/* barra de navegacion */
+body{
+    background: gray;   
+}
+.logo{
+    height: 120px;
+    width: 120px;
+}
+.title-barnav{
+    font-size: 2rem;
+    color:rgba(255, 255, 255, 0.888);
+    font-family: 'Michroma', sans-serif;
+    text-shadow: 2px 2px 3px black;  
+    padding-left: 220px;
+
+}
+.nav-item a{
+    font-size:1.1rem;
+    font-weight: 200;
+    font-family: 'Michroma', sans-serif;
+}
+
+.fondoimg{
+    background-image: url(../assets/fondobarranav.jpg);
+    background-size:cover;
+}
+.barnav-ul{
+    background-color: rgba(255, 255, 255, 0.671);
+    border-radius: 8px;
+    /* width: 132px; */
+}
+.ver-carrito{
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+/* cierre de barra de navegacion */
+
+/* inicio del main */
+
+.title{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 3px black;  
+    font-family: 'Michroma', sans-serif;
+    padding: 55px;
+}
+.barnav-index > ul{
+    gap: 20px;
+}
+
+/* Productos de tarjetas */
+
+.contenido-web{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+} 
+.tarjeta{
+    box-shadow:0 4px 8px rgba(0, 0 , 0 , 0.2);
+    max-width: 380px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Michroma', sans-serif;
+    margin-top: 20px;
+}
+.tarjeta > img {
+    width: 200px;
+    height: 250px;
+}
+.price{
+    color: rgb(34, 34, 34);
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+.tarjeta button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor:pointer;
+    width: 100%;
+    font-size: 20px;
+}
+.tarjeta button:hover{
+    background-color: rgba(255, 0, 0, 0.652);
+    opacity: 0.7;
+}
+
+/* CONTENIDO DEL MODAL */
+.modal-contenedor {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: #383838;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: auto;
+    top: 12vh;
+    scrollbar-color: none;
+}
+.modalContenedor::-webkit-scrollbar{
+    display: none;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a0909;
+    color: #fff;
+    width: 100%;
+}
+.modal-header-title {
+    justify-self: start;
+    font-family: 'Michroma', sans-serif;
+
+}
+.btn-modal-header{
+    cursor: pointer;
+}
+
+.modal-contenedor > .modal-contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 70%;
+    margin: 10px;
+}
+.price-header{
+    font-size: 1.2rem;
+}
+.modal-contenedor > div > img {
+    height: 175px;
+    width: 125px;
+}
+.total-content{
+    font-size: 25px;
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.514);
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;    
+}
+
+.delete-product{
+    cursor: pointer;
+}
+
+/* Acumulador del carrito */
+
+.cantidad-carrito {
+    background-color: red;
+    color:white;
+    border-radius: 55%;
+    font-size: 12px;
+    padding: 4px;
+    top: 3px;
+    right:11px;
+    position: absolute;
+    display: none;
+}
+
+.sumar {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.restar{
+    cursor: pointer;
+    font-size: 1.9rem;
+}
