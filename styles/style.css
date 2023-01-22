@@ -151,7 +151,6 @@ body{
 .total-content{
     font-size: 25px;
     padding: 20px;
-    background-color: rgba(255, 0, 0, 0.514);
     width: 100%;
     text-align: center;
     padding-top: 20px;    
@@ -173,6 +172,21 @@ body{
     right:11px;
     position: absolute;
     display: none;
+}
+.modal-contenedor {
+    background-color: #3b3b3bfe;
+}
+.btnCompra{
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-family:'Michroma', sans-serif;;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+.btnCompra:hover{
+    background-color: rgba(255, 55, 55, 0.592);
+    color: white;
 }
 
 .sumar {

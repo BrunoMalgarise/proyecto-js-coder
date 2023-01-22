@@ -12,7 +12,7 @@ const pintarCarrito = () => {
     modalbutton.innerText = "x";
     modalbutton.className = "btn-modal-header";
 
-    modalbutton.addEventListener("click", ()=>{
+    modalbutton.addEventListener("click", () => {
         modalContenedor.style.display = "none";
     })
 
@@ -29,7 +29,6 @@ const pintarCarrito = () => {
             <p>Cantidad:  ${product.cantidad}</p>
             <span class="sumar"> + </span>
             <p>Total: ${product.cantidad * product.precio}</p>
-
         `;
 
         modalContenedor.append(carritoContent);
@@ -37,23 +36,23 @@ const pintarCarrito = () => {
 
         let restar = carritoContent.querySelector(".restar")
 
-        restar.addEventListener("click", () =>{
-            if(product.cantidad !== 1) {
-            product.cantidad--;
+        restar.addEventListener("click", () => {
+            if (product.cantidad !== 1) {
+                product.cantidad--;
             }
             saveLocal();
             pintarCarrito();
         });
 
         let sumar = carritoContent.querySelector(".sumar")
-        sumar.addEventListener("click" , ()=>{
+        sumar.addEventListener("click", () => {
             product.cantidad++;
             saveLocal();
             pintarCarrito();
-        })
+        });
 
         let eliminar = document.createElement("span");
-        
+
         eliminar.innerText = "❌";
         eliminar.className = "delete-product";
         carritoContent.append(eliminar);
@@ -68,6 +67,11 @@ const pintarCarrito = () => {
     totalDeCompra.innerHTML = `
     Total a pagar: ${total} $`;
     modalContenedor.append(totalDeCompra);
+
+    const btnCompra = document.createElement("div");
+    btnCompra.innerHTML = `
+    <button class="btnCompra" id="btnComprarr">Comprar</button>`;
+    modalContenedor.append(btnCompra);
 };
 
 verCarrito.addEventListener("click", pintarCarrito);
@@ -75,7 +79,7 @@ verCarrito.addEventListener("click", pintarCarrito);
 const eliminarProducto = () => {
     const busquedaPorId = carrito.find((element) => element.id);
 
-    carrito = carrito.filter((carritoId) =>{
+    carrito = carrito.filter((carritoId) => {
         return carritoId !== busquedaPorId;
     });
     carritoContenido();
@@ -95,3 +99,16 @@ const carritoContenido = () => {
 };
 
 carritoContenido();
+
+const compraPelicula = document.querySelector("#contenidoWeb")
+compraPelicula.addEventListener("click", () => {
+    Swal.fire({
+        position: 'bottom-end',
+        title: 'Producto agregado',
+        icon: 'success',
+        timer: 1500,
+        width:250,
+        background:"#3b3b3bfe",
+        color:"#fff"
+    })
+})
