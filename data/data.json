@@ -1,0 +1,58 @@
+[
+    {
+    "id": 1,
+    "nombre": "Proyecto x",
+    "precio": 1200,
+    "img": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4I5ZUhze3q2_NumD8069l5anZaBZ4Lbpj1jtUjVsZ3weyvCBw",
+    "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre": "SuperCool",
+        "precio": 1200,
+        "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSHO_Zt_qAh0_9gWRniPCAP6oYEtoWYzTcAYKrhuFp5y3D86IpI",
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "nombre": "El Dictador",
+        "precio": 1200,
+        "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRh69em1o1m6RUb_gUS4JkYR-dN5nfGdaXpPvO1AoKRTzjg0GZo",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "nombre": "MIB 3",
+        "precio": 1200,
+        "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSoC68Pgf-Rbq37AppMAZgo4XbBJp2RlHwyrQidqKyv8fNMSSwN",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "nombre": "12Desafíos",
+        "precio": 1200,
+        "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRLjB3fn7qk5V7Kj9WNk8sKN90cNl5S10TAGg3XL20gLUkmLHuI",
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "nombre": "Friday",
+        "precio": 1200,
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNGiJl2EmHXCH7NhnDrevKTDejQeWIDaIGs_pgwRt_7VNSckOv",
+        "cantidad": 1
+    },
+    {
+        "id": 7,
+        "nombre": "Comando2",
+        "precio": 1200,
+        "img": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQU-hlJMpY5DedUeJI-l_M6Vwo0pTVUMxULxbx1AKoa7PgRFA_",
+        "cantidad": 1
+    },
+    {
+        "id": 8,
+        "nombre": "Hackers",
+        "precio": 1200,
+        "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQzwlbaSw67_BC1coiK7zyUm8_y4cPRnPPtZpdy9CFt1FjJM0mV",
+        "cantidad": 1
+    }
+]

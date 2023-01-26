@@ -82,7 +82,11 @@ pedirProductos(carrito)
 
 const lista = document.querySelector("#listado");
 
-
+fetch("")
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data)
+    })
 
 
 
