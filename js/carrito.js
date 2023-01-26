@@ -112,3 +112,4 @@ compraPelicula.addEventListener("click", () => {
         color:"#fff"
     })
 })
+

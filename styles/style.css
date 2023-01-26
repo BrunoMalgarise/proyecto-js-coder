@@ -72,7 +72,11 @@ body{
     font-family: 'Michroma', sans-serif;
     margin-top: 20px;
 }
-.tarjeta > img {
+/* .tarjeta > img {
+    width: 200px;
+    height: 250px;
+} */
+.img-tarjeta {
     width: 200px;
     height: 250px;
 }
@@ -196,4 +200,41 @@ body{
 .restar{
     cursor: pointer;
     font-size: 1.9rem;
+}
+.card-title{
+    color: black;
+    font-size: 1.3rem;
+}
+.contenedor{
+    color: white;
+    font-size: 2rem;
+}
+
+.contenedor, #listado {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+#listado {
+    align-items: stretch
+}
+
+.spinner{
+    border:  4px solid rgb(0, 72, 255);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+
+    animation: spin 1s ease infinite;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }

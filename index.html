@@ -12,39 +12,41 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fondoimg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./assets/logocinema.jpg" class="logo" alt="logo">
-                </a>
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <main>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fondoimg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="./assets/logocinema.jpg" class="logo" alt="logo">
+                    </a>
+                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
-                <div class="collapse navbar-collapse barnav-index" id="navbarNav">
-                    <h1 class="title-barnav">MALGA CINEMA</h1>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 barnav-ul position-absolute top-5 end-0">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link active fs-4 " aria-current="page">Inicio</a>
-                        </li>
-                        <li class="ver-carrito fs-2" id="verCarrito">🛒<span id="cantidadCarrito" class="cantidad-carrito"></span></li>
-                    </ul>
+                    <div class="collapse navbar-collapse barnav-index" id="navbarNav">
+                        <h1 class="title-barnav">MALGA CINEMA</h1>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 barnav-ul position-absolute top-5 end-0">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link active fs-4 " aria-current="page">Inicio</a>
+                            </li>
+                            <li class="ver-carrito fs-2" id="verCarrito">🛒<span id="cantidadCarrito"
+                                    class="cantidad-carrito"></span></li>
+                        </ul>
+                    </div>
                 </div>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="banner-contenedor">
+                <h2 class="title">PELICULAS</h2>
             </div>
-        </nav>
-    </header>
-
-    <!-- Banner -->
-
-    <div class="banner">
-        <div class="banner-contenedor">
-            <h2 class="title">PELICULAS</h2>
         </div>
-    </div>
 
-    <!-- PARA LA ENTREGA FINAL HACER FILTRADO DE CATEGORIAS -->
-    <!-- <div>
+
+        <!-- PARA LA ENTREGA FINAL HACER FILTRADO DE CATEGORIAS -->
+        <!-- <div>
         <label for="categoria-select">Categoria:</label>
 
         <select name="categoria" id="categ-select">
@@ -55,14 +57,26 @@
         </select>
     </div> -->
 
-    <!-- Contenido de la web -->
+        <!-- Contenido de la web -->
         <div id="contenidoWeb" class="contenido-web"></div>
 
-    <!-- Contenido del modal -->
-    <div id="modalContenedor" class="modal-contenedor"></div>
+        <!-- Contenido del modal -->
+        <div id="modalContenedor" class="modal-contenedor"></div>
 
-    
+        <input type="button" id="btn" value="Click" />
+        <div class="contenedor-lista">
+            <ul id="listado">
+                <!-- contenido dinámico -->
+            </ul>
+        </div>
 
+        <div class="contenedor" id="cargando">
+            <!-- contenido dinámico -->
+            <span class="spinner"></span>
+            
+        </div>
+
+    </main>
 
 
     <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
