@@ -72,6 +72,9 @@ body{
     font-family: 'Michroma', sans-serif;
     margin-top: 20px;
 }
+.title-card{
+    font-size: 20px;
+}
 .img-tarjeta {
     width: 200px;
     height: 250px;

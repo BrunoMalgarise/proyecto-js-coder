@@ -13,6 +13,16 @@ const btn = document.querySelector("#btn"),
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 //forEach pora el array Y empezamos a crear el html.
 
+//setTimeout
+const pedirProductos = (arr) => {
+    return new Promise((resolve, reject) => {
+        //Retraso de 2.5seg con setTimeout. 
+        setTimeout(() => {
+            resolve(arr);
+        }, 2500);
+    });
+};
+
 const renderServicios = (arr) => {
     productos.forEach((product) => {
         let contenido = document.createElement("div");
@@ -58,21 +68,16 @@ const renderServicios = (arr) => {
     });
 };
 
+
+
+
+
 //LocalStorage
-//set items
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
-//get items
 
-const pedirProductos = (arr) => {
-    return new Promise((resolve, reject) => {
-        //Retraso de 2.5seg con setTimeout. 
-        setTimeout(() => {
-            resolve(arr);
-        }, 2500);
-    });
-};
+
 
 pedirProductos(carrito)
     .then((res) => {
@@ -82,11 +87,26 @@ pedirProductos(carrito)
 
 const lista = document.querySelector("#listado");
 
-fetch("")
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data)
+
+
+
+
+//FETCH
+fetch('./data/data.json')
+    .then(res => res.json())
+    .then(datos => {
+        console.log(datos);
+        renderServicios(datos);
     })
+
+data.forEach(post => {
+    const li = document.createElement('li');
+    li.className = 'card';
+    li.innerHTML = `<h2>${post.title}</h2>
+            <p>${post.body}</p>`;
+    lista.appendChild(li)
+});
+
 
 
 
