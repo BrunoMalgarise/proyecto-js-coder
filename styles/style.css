@@ -72,11 +72,11 @@ body{
     font-family: 'Michroma', sans-serif;
     margin-top: 20px;
 }
-/* .tarjeta > img {
+.img-tarjeta {
     width: 200px;
     height: 250px;
-} */
-.img-tarjeta {
+}
+.tarjetas , img {
     width: 200px;
     height: 250px;
 }

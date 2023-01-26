@@ -12,49 +12,51 @@ const btn = document.querySelector("#btn"),
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 //forEach pora el array Y empezamos a crear el html.
-// productos.forEach((product) => {
-//     let contenido = document.createElement("div");
-//     contenido.className = "tarjeta";
-//     contenido.innerHTML = `
-//     <img src="${product.img}">
-//     <h3>${product.nombre}</h3>
-//     <p class="price">${product.precio} $</p>
-//     `;
 
-//     contenidoWeb.append(contenido);
+const renderServicios = (arr) => {
+    productos.forEach((product) => {
+        let contenido = document.createElement("div");
+        contenido.className = "tarjeta";
+        contenido.innerHTML = `
+        <img src="${product.img}">
+        <h3>${product.nombre}</h3>
+        <p class="price">${product.precio} $</p>
+        `;
 
-//     let comprar = document.createElement("button");
-//     comprar.innerText = "comprar";
-//     comprar.className = "btnComprar"
+        contenidoWeb.append(contenido);
 
-//     contenido.append(comprar);
+        let comprar = document.createElement("button");
+        comprar.innerText = "comprar";
+        comprar.className = "btnComprar"
 
-//     comprar.addEventListener("click", () => {
+        contenido.append(comprar);
 
-//         const repetido = carrito.some((productoRepetido) => productoRepetido.id === product.id);
+        comprar.addEventListener("click", () => {
 
-//         if (repetido) {
-//             carrito.map((prod) => {
-//                 if (prod.id === product.id) {
-//                     prod.cantidad++;
-//                 }
-//             });
-//         } else {
-//             carrito.push({
-//                 id: product.id,
-//                 img: product.img,
-//                 nombre: product.nombre,
-//                 precio: product.precio,
-//                 cantidad: product.cantidad,
-//             });
-//         }
-//         console.log(carrito);
-//         console.log(carrito.length);
-//         carritoContenido();
-//         saveLocal();
-//     });
-// });
+            const repetido = carrito.some((productoRepetido) => productoRepetido.id === product.id);
 
+            if (repetido) {
+                carrito.map((prod) => {
+                    if (prod.id === product.id) {
+                        prod.cantidad++;
+                    }
+                });
+            } else {
+                carrito.push({
+                    id: product.id,
+                    img: product.img,
+                    nombre: product.nombre,
+                    precio: product.precio,
+                    cantidad: product.cantidad,
+                });
+            }
+            console.log(carrito);
+            console.log(carrito.length);
+            carritoContenido();
+            saveLocal();
+        });
+    });
+};
 
 //LocalStorage
 //set items
@@ -62,10 +64,6 @@ const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 //get items
-
-
-//Cosas nuevass.
-
 
 const pedirProductos = (arr) => {
     return new Promise((resolve, reject) => {
@@ -75,40 +73,18 @@ const pedirProductos = (arr) => {
         }, 2500);
     });
 };
-let productosAuxiliar = [];
 
-const renderServicios = (arr) => {
-    let html;
-    contenedor.innerText = "";
-    for (const item of arr) {
-        const { id, nombre, img, precio } = item;
-
-        html = `
-        <div class="tarjeta">
-            <div class="card-image">
-            <img class="img-tarjeta" src="${img}">
-            </div>
-        <div class="card-content">
-            <span class="card-title">${nombre.toUpperCase()}</span>
-            <p class="price">$${precio}</p>
-        
-        </div>
-        <div class="card-action">
-            <button class="btnComprar" id="${id}">Comprar</button>
-        </div>
-        </div>
-    `;
-
-        contenedor.innerHTML += html;
-    }
-};
-pedirProductos(productos)
+pedirProductos(carrito)
     .then((res) => {
-        productosAuxiliar = res;
-        renderServicios(productosAuxiliar)
+        carrito = res;
+        renderServicios(carrito)
     });
 
 const lista = document.querySelector("#listado");
+
+
+
+
 
 
 
