@@ -23,6 +23,13 @@ const pedirProductos = (arr) => {
     });
 };
 
+
+
+
+
+
+
+
 const renderServicios = (arr) => {
     productos.forEach((product) => {
         let contenido = document.createElement("div");
